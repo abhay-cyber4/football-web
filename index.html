@@ -1,78 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>zizou-football</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 2rem;
-            text-align: center;
-        }
-        img {
-            max-width: 80%;
-            height: auto;
-            border: 1px solid #ccc;
-        }
-        .endpoint-list {
-            margin-top: 2rem;
-            text-align: left;
-            display: inline-block;
-        }
-        .endpoint-list a {
-            display: block;
-            margin: 0.25rem 0;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>zizou-football</title>
 </head>
 <body>
 
-    <!-- Default page (root /) -->
-    <div id="default-view">
-        <h1>ZIZOU Challenge</h1>
-        <img src="zizou_hidden.png" alt="ZIZOU Challenge Image">
-
-        <div class="endpoint-list">
-            <h3>Endpoints:</h3>
-            <a href="/admin">/admin</a>
-            <a href="/backup">/backup</a>
-            <a href="/config">/config</a>
-            <a href="/robots.txt">/robots.txt</a>
-            <a href="/hidden">/hidden</a>
-            <a href="/usbliter8">/usbliter8</a>
-        </div>
-    </div>
-
-    <!-- Endpoint views (hidden by default, shown via JS) -->
-    <div id="endpoint-view" style="display:none;">
-        <h1 id="endpoint-title">Endpoint</h1>
-        <img id="endpoint-image" src="" alt="Endpoint Image">
-        <p><a href="/">← Back to home</a></p>
-    </div>
-
-    <script>
-        // Map paths to image files
-        const routes = {
-            "/admin":      "admin_image.png",
-            "/backup":     "backup_image.png",
-            "/config":     "config_image.png",
-            "/robots.txt": "robots_image.png",
-            "/hidden":     "hidden_image.png",
-            "/usbliter8":  "usbliter8_image.png"
-        };
-
-        const path = window.location.pathname;
-
-        if (routes[path]) {
-            // Hide default, show endpoint view
-            document.getElementById("default-view").style.display = "none";
-            document.getElementById("endpoint-view").style.display = "block";
-
-            document.getElementById("endpoint-title").textContent = path;
-            document.getElementById("endpoint-image").src = routes[path];
-        }
-    </script>
+```
+<img src="/zizou_hidden.png" alt="ZIZOU Challenge Image">
+```
 
 </body>
 </html>
